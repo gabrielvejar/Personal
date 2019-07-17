@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <br>
+
+    <h1>Proyectos</h1>
+
+    <br>
+    <br>
+
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Proyecto</th>
+                <th scope="col">Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td><a href="proyectos/proyecto1/proyecto1.html">Proyecto 1</a></td>
+                <td>Primer Proyecto en Javascript</td>
+            </tr>
+            <tr>
+                    <th scope="row">2</th>
+                    <td><a href="proyectos/proyecto1/proyecto2.html">Proyecto 2</a></td>
+                    <td>Segundo Proyecto en Javascript</td>
+                </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
