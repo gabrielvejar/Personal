@@ -1,0 +1,36 @@
+img {
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+  }
+  
+  @keyframes slidein {
+    0% {
+        margin-left: 0;
+    }
+
+    30% {
+        margin-left: 0;
+    }
+
+    35% {
+        margin-left: -100%;
+    }
+
+    65% {
+        margin-left: -100%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    95% {
+        margin-left: -200%;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+  }

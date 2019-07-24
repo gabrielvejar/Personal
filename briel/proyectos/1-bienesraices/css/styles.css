@@ -2,6 +2,43 @@ html{
     font-size: 62.5%; /* Reset para REMS - 62.5% = 10px de 16px */
 }
 
+
+
+/* Imagen flotante */
+.toolbar {
+    
+    position: fixed;
+    bottom: 0;
+    right: -27rem;
+    z-index: 10000;
+    transform: translate(0%);
+    transition-duration: 0.5s;
+    }
+
+.toolbar img {
+    width: 30rem;
+    animation-duration: 20s;
+    animation-name: poppp;
+    animation-iteration-count: infinite;
+    /*animation-fill-mode: both;*/
+
+
+}
+
+.toolbar:hover{
+    transform: translate(-50%);
+    transition-duration: 0.5s;
+}
+
+.menu-flotante{
+    max-height: 0;
+    max-width: 30 rem;
+    position: fixed;
+    z-index: 100010;
+    background: #71B100;
+}
+
+
 body{
     font-family: 'Lato', sans-serif;
     font-size: 1.6rem;
@@ -45,6 +82,8 @@ h4{
 }
 
 /* Header */
+
+
 .site-header.inicio{
     background-image: url("../img/header.jpg");
     background-position: center center;
@@ -108,4 +147,33 @@ h4{
 
 .icono h3 {
     text-transform: uppercase;
+}
+
+
+
+
+
+
+
+@keyframes poppp {
+
+    0% {
+        transform: translate(0%);
+    }       
+
+    96% {
+        transform: translate(0%);
+    } 
+
+    98% {
+        transform: translate(-10%);
+        transition-duration: 0.5s;
+    } 
+
+/*    100% {
+        transform: translate(0%);
+        transition-duration: 2s;
+    }    
+*/
+
 }
