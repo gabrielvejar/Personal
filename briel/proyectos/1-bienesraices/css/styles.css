@@ -2,14 +2,27 @@ html{
     font-size: 62.5%; /* Reset para REMS - 62.5% = 10px de 16px */
 }
 
+.toolbardiv {
 
+    height: 5rem;
+    width: 20rem;
+    background-color: aqua;
+    position: fixed;
+    border-radius: 2.5rem;    
+    display: flex;
+    align-items: center;
+    padding: 0 5rem;
+    font-family:
+
+    
+}
 
 /* Imagen flotante */
 .toolbar {
     
     position: fixed;
-    bottom: 0;
-    right: -27rem;
+    bottom: 1rem;
+    right: -28rem;
     z-index: 10000;
     transform: translate(0%);
     transition-duration: 0.5s;
@@ -26,7 +39,7 @@ html{
 }
 
 .toolbar:hover{
-    transform: translate(-50%);
+    transform: translate(-60%);
     transition-duration: 0.5s;
 }
 
