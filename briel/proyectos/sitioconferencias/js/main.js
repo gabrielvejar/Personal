@@ -29,9 +29,9 @@
 
         calcular.addEventListener('click' , calcularMontos);
 
-        pase_dia.addEventListener('blur', mostrarDias);
-        pase_dosdias.addEventListener('blur', mostrarDias);
-        pase_completo.addEventListener('blur', mostrarDias);
+        pase_dia.addEventListener('change', mostrarDias);
+        pase_dosdias.addEventListener('change', mostrarDias);
+        pase_completo.addEventListener('change', mostrarDias);
         
 
 
