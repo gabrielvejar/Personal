@@ -1,1 +1,124 @@
-var api="AIzaSyCeSzprwFmUOSsAIf36sT9hONLvf3ReD_4";function initMap(){var n={lat:20.6772885,lng:-103.3856328},a=new google.maps.Map(document.getElementById("mapa"),{center:n,zoom:14,mapTypeId:google.maps.MapTypeId.ROADMAP}),e=new google.maps.InfoWindow({content:"<h2>GDLWEBCAMP</h2><p>Del 10 al 12 de Diciembre</p><p>Visitanos!</p>"}),i=new google.maps.Marker({position:n,map:a,title:"GDLWEBCAMP"});i.addListener("click",function(){e.open(a,i)})}$(function(){$("#filtros a").on("click",function(){return $("#filtros a").removeClass("activo"),$(this).addClass("activo"),$(".registrados tbody tr").hide(),"pagados"==$(this).attr("id")?$(".registrados tbody tr.pagado").show():$(".registrados tbody tr.no_pagado").show(),!1}),$(".nombre-sitio").lettering(),$('body.conferencia .navegacion-principal a:contains("Conferencia")').addClass("activo"),$('body.calendario .navegacion-principal a:contains("Calendario")').addClass("activo"),$('body.invitados .navegacion-principal a:contains("Invitados")').addClass("activo");var n=$(window).height(),a=$(".barra").innerHeight();$(window).scroll(function(){$(window).scrollTop()>n?($(".barra").addClass("fixed"),$("body").css({"margin-top":a+"px"})):($(".barra").removeClass("fixed"),$("body").css({"margin-top":"0px"}))}),$(".menu-movil").on("click",function(){$(".navegacion-principal").slideToggle()});$(window).resize(function(){$(document).width()>=768?$(".navegacion-principal").show():$(".navegacion-principal").hide()}),$(".programa-evento .info-curso:first").show(),$(".menu-programa a:first").addClass("activo"),$(".menu-programa a").on("click",function(){$(".menu-programa a").removeClass("activo"),$(this).addClass("activo"),$(".ocultar").hide();var n=$(this).attr("href");return $(n).fadeIn(1e3),!1}),jQuery(".resumen-evento").length>0&&$(".resumen-evento").waypoint(function(){$(".resumen-evento li:nth-child(1) p").animateNumber({number:6},1200),$(".resumen-evento li:nth-child(2) p").animateNumber({number:15},1200),$(".resumen-evento li:nth-child(3) p").animateNumber({number:3},1500),$(".resumen-evento li:nth-child(4) p").animateNumber({number:9},1500)},{offset:"60%"}),$(".cuenta-regresiva").countdown("2017/12/10 09:00:00",function(n){$("#dias").html(n.strftime("%D")),$("#horas").html(n.strftime("%H")),$("#minutos").html(n.strftime("%M")),$("#segundos").html(n.strftime("%S"))}),$(".invitado-info").colorbox({inline:!0,width:"50%"}),$(".boton_newsletter").colorbox({inline:!0,width:"50%"})});
+(function() {
+    "use strict";
+
+    var regalo = document.getElementById('regalo');
+
+    document.addEventListener('DOMContentLoaded', function(){
+
+        //Campos Datos usuario
+        var nombre = document.getElementById('nombre');
+        var apellido = document.getElementById('apellido');
+        var email = document.getElementById('email');
+
+        //Campos pases
+        var pase_dia = document.getElementById('pase_dia');
+        var pase_dosdias = document.getElementById('pase_dosdias');
+        var pase_completo = document.getElementById('pase_completo');
+        
+        //Botones y divs
+        var calcular = document.getElementById('calcular');
+        var errorDiv = document.getElementById('error');
+        var botonRegistro = document.getElementById('btnRegistro');
+        var lista_productos = document.getElementById('lista-productos');
+        var suma = document.getElementById('suma-total');
+
+        //Extras
+        var camisas = document.getElementById('camisa_evento');
+        var etiquetas = document.getElementById('etiquetas');
+
+
+        calcular.addEventListener('click' , calcularMontos);
+
+        pase_dia.addEventListener('blur', mostrarDias);
+        pase_dosdias.addEventListener('blur', mostrarDias);
+        pase_completo.addEventListener('blur', mostrarDias);
+        
+
+
+        function calcularMontos(event){
+            event.preventDefault();
+            if(regalo.value === '') {
+                alert("Debes elegir un regalo");
+                regalo.focus();
+            } else {
+                var boletosDia = parseInt(pase_dia.value, 10)|| 0,
+                    boletos2Dias = parseInt(pase_dosdias.value, 10)|| 0,
+                    boletoCompleto = parseInt(pase_completo.value, 10)|| 0,
+                    cantCamisas = parseInt(camisas.value, 10)|| 0,
+                    cantEtiquetas = parseInt(etiquetas.value, 10)|| 0;
+
+                var totalPagar = (boletosDia*7000) + (boletos2Dias*10000) + (boletoCompleto*12000) + ((cantCamisas*5000) * .93) + (cantEtiquetas * 1500);
+
+                var listadoProductos = [];
+
+                if(boletosDia >= 1) {
+                    listadoProductos.push(boletosDia + ' Pases por día');
+                }
+                if(boletos2Dias >= 1) {
+                    listadoProductos.push(boletos2Dias + ' Pases por 2 días');
+                }
+                if(boletoCompleto >= 1) {
+                    listadoProductos.push(boletoCompleto + ' Pases completos');
+                }
+                if(cantCamisas >= 1) {
+                    listadoProductos.push(cantCamisas + ' Camisas');
+                }
+                if(cantEtiquetas >= 1) {
+                    listadoProductos.push(cantEtiquetas + ' Etiquetas');
+                }
+
+                lista_productos.style.display = 'block';
+                lista_productos.innerHTML = '';
+                for (var i = 0; i < listadoProductos.length; i++){
+                    lista_productos.innerHTML += listadoProductos[i] + '</br>';
+                }
+                suma.innerHTML = "$ " + totalPagar.toFixed(0);
+                
+            }
+            
+        }
+
+        function mostrarDias(){
+            var boletosDia = parseInt(pase_dia.value, 10)|| 0,
+                boletos2Dias = parseInt(pase_dosdias.value, 10)|| 0,
+                boletoCompleto = parseInt(pase_completo.value, 10)|| 0;
+
+
+            var diasElegidos = [];
+
+            if(boletosDia > 0) {
+                diasElegidos.push('viernes');
+            }
+            
+            if(boletos2Dias > 0) {
+                diasElegidos.push('viernes','sabado');
+            }
+            
+            if(boletoCompleto > 0) {
+                diasElegidos.push('viernes','sabado','domingo');
+            }
+
+            document.getElementById('viernes').style.display = 'none';
+            document.getElementById('sabado').style.display = 'none';
+            document.getElementById('domingo').style.display = 'none';
+            
+            for (var i = 0; i < diasElegidos.length; i++) {
+
+                document.getElementById(diasElegidos[i]).style.display = 'block';
+
+            }
+
+
+        }
+
+
+
+
+        
+
+
+
+
+    }); // DOM Content Loaded
+
+})();

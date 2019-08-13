@@ -11,16 +11,16 @@
 
 
     <style>
-        @media only screen and (min-width: 768px) {
-        /* laptop: */
-            #tablacu {
-                width: 70%;
+         @media only screen and (min-width: 768px) {
+         /* laptop:  */
+            #div-tabla {
+                width: 100%;
             }
-        }
+        } 
         @media only screen and (max-width: 767px) {
         /* mobile: */
-            #tablacu {
-                width: 70%;
+            #div-tabla {
+                max-width: 767px;
             }
         }
     </style>
@@ -36,53 +36,57 @@
     <br>
     <br>
 
-    <div class="shadow-lg p-3 mb-5 rounded d-flex justify-content-around" style="background-color: rgb(241, 241, 241)">
-        <table class="table table-hover" id="tablacu">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Proyecto</th>
-                <th scope="col">Lenguajes y Tecnologías utilizadas</th>
-                <th scope="col">Descripción</th>
-                <th scope="col">Link GitHub</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- fila 1 -->
-            <tr>
-                <th scope="row">1</th>
-                <td><a href="proyectos/1-bienesraices/index.html">Proyecto 1</a></td>
-                <td>HTML - CSS</td>
-                <td>Bienes Raices</td>
-                <td><a href="https://github.com/gabrielvejar/Javascript/tree/master/briel/proyectos/1-bienesraices" target="_blank">Link</a></td>
-            </tr>
-            <!-- fila 2 -->
-            <tr>
-                <th scope="row">2</th>
-                <td><a href="proyectos/2-blogdecafe/index.html">Proyecto 2</a></td>
-                <td>HTML - CSS</td>
-                <td>Blog de Café</td>
-                <td><a href="https://github.com/gabrielvejar/Javascript/tree/master/briel/proyectos/2-blogdecafe" target="_blank">Link</a></td>
-            </tr>
-            <!-- fila 3 -->
-            <tr>
-                <th scope="row">3</th>
-                <td><a href="proyectos/3-blogviajes/index.html">Proyecto 3</a></td>
-                <td>HTML - CSS</td>
-                <td>Blog de Viajes</td>
-                <td><a href="https://github.com/gabrielvejar/Javascript/tree/master/briel/proyectos/3-blogviajes" target="_blank">Link</a></td>
-            </tr>
-            <!-- fila 4 -->
-            <tr>
-                <th scope="row">4</th>
-                <td><a href="proyectos/4-frontTienda/index.html">Proyecto 4</a></td>
-                <td>HTML - CSS</td>
-                <td>Maquetado Tienda</td>
-                <td><a href="https://github.com/gabrielvejar/Javascript/tree/master/briel/proyectos/4-frontTienda" target="_blank">Link</a></td>
-            </tr>
-        </tbody>
-        </table>
+
+    <div class="container">
+        <div id="div-tabla" class="row justify-content-md-center" style="background-color: rgb(241, 241, 241)">
+            <table class="table table-hover" id="tablacu">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Proyecto</th>
+                    <th scope="col">Lenguajes y Tecnologías utilizadas</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Link GitHub</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- fila 1 -->
+                <tr>
+                    <th scope="row">1</th>
+                    <td><a href="proyectos/1-bienesraices/index.html">Proyecto 1</a></td>
+                    <td>HTML - CSS</td>
+                    <td>Bienes Raices</td>
+                    <td><a href="https://github.com/gabrielvejar/Javascript/tree/master/briel/proyectos/1-bienesraices" target="_blank">Link</a></td>
+                </tr>
+                <!-- fila 2 -->
+                <tr>
+                    <th scope="row">2</th>
+                    <td><a href="proyectos/2-blogdecafe/index.html">Proyecto 2</a></td>
+                    <td>HTML - CSS</td>
+                    <td>Blog de Café</td>
+                    <td><a href="https://github.com/gabrielvejar/Javascript/tree/master/briel/proyectos/2-blogdecafe" target="_blank">Link</a></td>
+                </tr>
+                <!-- fila 3 -->
+                <tr>
+                    <th scope="row">3</th>
+                    <td><a href="proyectos/3-blogviajes/index.html">Proyecto 3</a></td>
+                    <td>HTML - CSS</td>
+                    <td>Blog de Viajes</td>
+                    <td><a href="https://github.com/gabrielvejar/Javascript/tree/master/briel/proyectos/3-blogviajes" target="_blank">Link</a></td>
+                </tr>
+                <!-- fila 4 -->
+                <tr>
+                    <th scope="row">4</th>
+                    <td><a href="proyectos/4-frontTienda/index.html">Proyecto 4</a></td>
+                    <td>HTML - CSS</td>
+                    <td>Maquetado Tienda</td>
+                    <td><a href="https://github.com/gabrielvejar/Javascript/tree/master/briel/proyectos/4-frontTienda" target="_blank">Link</a></td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
     </div>
+
 </body>
 
 </html>
