@@ -639,7 +639,7 @@ div.tabla-precio p.numero {
 
 div.mapa {
   height: 420px;
-  background-color: green;
+  background-color: rgba(0, 70, 128, 0.507);
 }
 /**+ Testimoniales   **/
 div.testimoniales {

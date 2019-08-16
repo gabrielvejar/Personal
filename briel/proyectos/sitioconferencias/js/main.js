@@ -5,6 +5,17 @@
 
     document.addEventListener('DOMContentLoaded', function(){
 
+
+        var map = L.map('mapa').setView([-33.443203, -70.655852], 16);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([-33.443203, -70.655852]).addTo(map)
+            .bindPopup('GDLWEBCAMP<br>Entradas ya a la venta.<br><a target="_blank" href="https://goo.gl/maps/MK1qQJr2c9vJSTDT7">Abrir en Google Maps</a>')
+            .openPopup();
+
         //Campos Datos usuario
         var nombre = document.getElementById('nombre');
         var apellido = document.getElementById('apellido');

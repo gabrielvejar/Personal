@@ -8,6 +8,18 @@ html {
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
+h1 {
+    font-size: 3.8rem;
+}
+h2 {
+    font-size: 3.4rem;
+}
+h3 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 2.6rem;
+}
 img {
     max-width: 100%;
 }
@@ -113,6 +125,46 @@ p {
         margin-top: 40px;
     }
 }
+
+/**Servicios**/
+
+div.servicios {
+    margin-top: 30px;
+}
+div.servicios nav {
+    background-color: #00B8E4;
+}
+div.servicios nav a {
+    padding: 10px;
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+div.servicios nav a.activo {
+    background-color: #DB008D;
+}
+
+div.servicios nav a:hover{
+    background-color: #DB008D;
+}
+
+div.nuestros-servicios {
+    position: relative;
+    height: 200px;
+}
+
+div.nuestros-servicios > div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #DB008D;
+    padding: 20px;
+    display: none;
+    color: #ffffff;
+}
+
+
 /** Entradas de Blog **/
 h2 {
     color: #00B8E4;
