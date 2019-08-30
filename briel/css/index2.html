@@ -1,0 +1,135 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Gabriel Vejar</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  
+
+  <main>     
+      <div class="nav-ba ">
+          <ul>
+            <li>inicio</li>
+            <li>datos</li>
+            <li>conocimientos</li>
+            <li>experiencia</li>
+          </ul>
+        </div> 
+
+  <div id="video-wrap" class="video-wrap">
+      <div class="content-overlay texto animated bounceInLeft">
+          <h1>GABRIEL VEJAR</h1>
+          <h4 class="ingeniero element"></h4>
+      </div>
+      <video preload="metadata" autoplay loop id="my-video">
+        <source src="video/videobg.mp4" type="video/mp4">
+        <source src="video/videobg.webm" type="video/webm">
+      </video>
+  </div>
+
+</main>
+
+
+<section class="contenedor">
+<div class="consola animated bounceInUp ">
+  <br>
+    <table>
+      <tr>
+          <td><span style="color:rgba(0, 0, 0, 0)">__</span>var <span style="color: brown; font-weight: bold;">person</span> = {</td>           <td></td>
+      </tr>
+    <tr>
+        <td></td>           <td id="nombre" style="white-space: pre"></td>
+    </tr>
+    <tr>
+        <td></td>           <td>};</td>
+    </tr>
+    </table>
+</div>
+</section>
+<!-- <section id="seccion">
+      <div class="texto animated bounceInLeft" >
+          <h1>Gabriel Vejar</h1>
+          <h4 class="ingeniero animated fadeInUp">Ingeniero en Telecomunicaciones, Conectividad y Redes</h4>
+        </div>
+</section> -->
+ 
+
+
+
+
+
+
+
+
+  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/backgroundVideo.js"></script>
+  <script src="js/typed.min.js"></script>
+
+  <script>
+    $('#my-video').backgroundVideo();
+  </script>
+  <script>
+          var typed = new Typed('.element', {
+            strings: ["Ingeniero en Telecomunicaciones, Conectividad y Redes", "Desarrollador Web", "Programador JavaScript", "Programador PHP", "Programador Java", "Programador Python", "Mysql"  ],
+            typeSpeed: 40,
+            loop: true
+          });
+  </script>
+
+
+<!-- <script>
+    var typed = new Typed('#nombre', {
+      strings: ["name: \"Gabriel\", ^500 <br>lastname: \"Vejar\",^500 <br>age:28^100 <br>};"  ],
+      typeSpeed: 40
+    });
+</script> -->
+<script>
+    var typed = new Typed('#nombre', {
+      strings: ["<span class=\"parametros\">^600name:</span>           <span class=\"datos\">\"Gabriel\"</tr></span>, ^200\n<span class=\"parametros\">lastname:</span>     <span class=\"datos\">\"Vejar\"</span>,^200\n<span class=\"parametros\">age:</span>               <span class=\"datos\">28</span>,^200\n<span class=\"parametros\">nationality:</span>   <span class=\"datos\">\"chilean\"</span> ^5000"  ],
+      // strings: ["<tr><td><span class=\"parametros\">^600name:</span></td><td><span class=\"datos\">\"Gabriel\"</tr></span>, </td></tr>^200<tr><td><span class=\"parametros\">lastname:</span></td><td><span class=\"datos\">\"Vejar\"</span>,</td></tr>^200<tr><td><span class=\"parametros\">age</span></td><td><span class=\"datos\">28</span>,</td></tr>^200<tr><td><span class=\"parametros\">nationality:</span></td><td><span class=\"datos\">\"chilean\"</span></td></tr> ^5000"  ],
+      typeSpeed: 20,
+      showCursor: false,
+      loop: true
+    });
+</script>
+
+<!--  
+ <script type="text/javascript">
+          var ancho = $(window).width();
+          $('#videobg').width(ancho-1);
+    </script> -->
+
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
