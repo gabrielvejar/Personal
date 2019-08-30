@@ -19,16 +19,20 @@ function typedInfoPersonal(){
 $('#ventana-terminal').hide();
 
 $(function() {
+
+
     typedInfoPersonal();
     window.addEventListener('scroll', () => {
 
         // const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const alturavh = window.innerHeight/100;
         const scrolled = window.scrollY;
 
         // console.log("scrollable" + scrollable);
+        console.log(alturavh);
         console.log("scrolled" + scrolled);
-
-        if (scrolled >= 600 && scrolled <1200){
+        
+        if (scrolled >= 120*alturavh && scrolled < 140*alturavh){
             $('#ventana-terminal').show();
             $('#ventana-terminal').addClass('animated bounceInLeft');
             

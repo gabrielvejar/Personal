@@ -6,29 +6,88 @@ html, body {
     background-size: cover;
     background-image: url("../img/fondo.jpg");
 } 
+main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #34262b;
+    z-index: 100;
+}
+
+main > video {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 section {
     width: 100%;
-    height: 3000px;
+    height: 150vh;
     margin: 0;
     padding: 0;
     /* background-color: rgba(0, 255, 255, 0.384); */
 }
 #iconos {
-    background-color: chartreuse;
+    background-color: rgba(13, 112, 151, 0.568);
+    border-radius: 2vw 0 0 2vw;
     position: fixed;
-    width: 100px;
-    height: 400px;;
+    width: 7vw;
+    height: 30vw;
     top: 50%;
     left: 100%;
     transform: translate(-100%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    -webkit-box-shadow: 0px 33px 83px 15px rgba(0,0,0,0.66);
+    -moz-box-shadow: 0px 33px 83px 15px rgba(0,0,0,0.66);
+    box-shadow: 0px 33px 83px 15px rgba(0,0,0,0.66);
+}   
+
+#icono-info-personal {
+    position: relative;
+    font-size: 0.7vw;
+    top: 0;
+    left: 0;
+}
+#icono-info-personal a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+}
+#icono-info-personal i {
+    font-size: 5vw;
+    color: yellow;
+    margin: auto;
+    text-align: center;
+}
+#icono-info-personal p,
+#icono-info-personal i{
+    text-shadow: 3px 3px 16px #272634;
+    
 }
 
-
-#ventana-terminal {
+/*medidas en px*/
+/* #ventana-terminal {
     border-radius: 10px 10px 0 0;
     position: fixed;
     width: 600px;
     height: 300px;;
+    top: 20%;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 33px 83px 15px rgba(0,0,0,0.66);
+    -moz-box-shadow: 0px 33px 83px 15px rgba(0,0,0,0.66);
+    box-shadow: 0px 33px 83px 15px rgba(0,0,0,0.66);
+} */
+
+/*medidas en vh*/
+#ventana-terminal {
+    border-radius: 10px 10px 0 0;
+    position: fixed;
+    width: 40vw;
+    height: 20vw;
     top: 20%;
     left: 15%;
     display: flex;
@@ -42,6 +101,7 @@ section {
     box-shadow: 0px 33px 83px 15px rgba(0,0,0,0.66);
 }
 
+
 .barra {
     background: linear-gradient(0deg, rgba(18,53,60,1) 0%, rgba(54,148,167,1) 100%);
     border-radius: 10px 10px 0 0;
@@ -54,16 +114,18 @@ section {
 .barra p {
     font-family: 'Roboto', sans-serif;
     color: rgb(255, 255, 255);
+    font-size: 1.2vw;
 }
 
 .consola{
     background-color: rgba(0, 0, 0, 0.774);
     height: 90%;;
-    padding-left: 20px;
-    padding-top: 20px;
+    padding-left: 1.3vw;
+    padding-top: 1.3vw;
     color: white;
+    font-size: 1.4vw;
     font-family: 'Roboto Mono', monospace;
-    line-height: 1.5;
+    /* line-height: 1.5; */
 }
 
 /* #info_personal {
@@ -80,3 +142,59 @@ section {
 #seccion1 {
     background-image: url("../img/fondo.jpg");
 } */
+
+@media screen and (max-width : 640px) and (orientation: portrait) {
+    #ventana-terminal {
+    width: 90vw;
+    height: 45vw;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    }
+
+    .consola,
+    .barra p{
+    color: white;
+    font-size: 3vw;
+    }
+    .consola{
+    padding-left: 2.5vw;
+    padding-top: 2.5vw;
+    }
+
+    #iconos {
+        width: 100%;
+        height: 20vw;
+        top: 10vw;
+        flex-direction: row;
+        border-radius: 0 0 2vw 2vw;
+    }
+    #icono-info-personal {
+        font-size: 3vw;
+    }
+    #icono-info-personal i {
+        font-size: 12vw;
+    }
+}
+
+
+#anchor-1 {
+    position: absolute;
+    height: 5vw;
+    width: 5vw;
+    background-color: darkmagenta;
+    top: 121vh;
+    left :0;
+    /* margin: auto; */
+}
+#anchor-2 {
+    position: absolute;
+    height: 5vw;
+    width: 5vw;
+    background-color: darkmagenta;
+    top: 141vh;
+    left :0;
+    /* margin: auto; */
+}
