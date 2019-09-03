@@ -162,6 +162,13 @@ section {
     font-size: 1.2vw;
 }
 
+#ventana-contacto {
+    position: fixed;
+    top: 20%;
+    left: 15%;
+
+    width: 50vw;
+}
 
 
 

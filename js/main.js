@@ -5,6 +5,7 @@ $('#texto-principal').hide();
 
 $('#ventana-terminal').hide();
 $('#ventana-terminal2').hide();
+$('#ventana-contacto').hide();
 
 $(function() {
 
@@ -18,6 +19,10 @@ $(function() {
         if (id !== 'ventana-terminal2'){
             $('#ventana-terminal2').fadeOut(); 
         }
+        if (id !== 'ventana-contacto'){
+            $('#ventana-contacto').fadeOut(); 
+        }
+
         if (id !== ''){
             $('#'+id).show(); 
         }
@@ -34,14 +39,16 @@ $(function() {
     $('#texto-principal').addClass('animated fadeInDown');
     $('#ventana-terminal').addClass('animated bounceInRight');
     $('#ventana-terminal2').addClass('animated bounceInRight');
+    $('#ventana-contacto').addClass('animated bounceInRight');
 
 
 
             var titulos_gabriel = new Typed('#titulos-gabriel', {
-                strings: ['engineer' , 'web designer' , 'JavaScript programmer' , 'PHP programmer' , 'Java programmer' , 'Python programmer'],
-                // strings: ['Ingeniero en Telecomunicaciones, Conectividad y Redes' , 'Desarrollador web' , 'Programador JavaScript' , 'Programador PHP' , 'Programador Java' , 'Programador Python'],
+                strings: ['engen' , 'enginier' , 'enge' , 'engine' , 'e^2000' , 'ingeniero', 'web designer' , 'JavaScript programmer' , 'PHP programmer' , 'Java programmer' , 'Python programmer' ],
+                // strings: ['Ingeniero en Telecomunicaciones,<br> Conectividad y Redes' , 'Desarrollador web' , 'Programador JavaScript' , 'Programador PHP' , 'Programador Java' , 'Programador Python'],
                 // strings: ['Ingeniero en Telecomunicaciones, Conectividad y Redes' , 'Code enthusiast'],
-                typeSpeed: 20,
+                // strings: ['Java develo' , 'Java programm' , 'Java coder' , 'Java ^2000' , 'Java lover <3'],
+                typeSpeed: 40,
                 startDelay: 1000,
                 loop: true,
                 showCursor: false,
@@ -82,7 +89,7 @@ $(function() {
         console.log(alturavh);
         console.log("scrolled" + scrolled);
 
-        
+        //main - inicio
         if (scrolled < window.innerHeight) {
             ventana('texto-principal');
 
@@ -91,6 +98,7 @@ $(function() {
             $('#icono-inicio').addClass('borde');
         }
 
+        //seccon info personal
         if (scrolled >= window.innerHeight && scrolled < window.innerHeight*2){
 
            
@@ -104,6 +112,8 @@ $(function() {
 
 
         } 
+
+        //seccion formacion academica
         if (scrolled >= window.innerHeight*2 && scrolled < window.innerHeight*3) {
 
             typed2.start();
@@ -121,10 +131,11 @@ $(function() {
 
         }
 
+        //seccion contacto
         if (scrolled >= window.innerHeight*3 && scrolled < window.innerHeight*4) {
 
 
-            ventana('');
+            ventana('ventana-contacto');
             
 
             $('.clase-iconos').removeClass('borde');
@@ -137,54 +148,3 @@ $(function() {
 
 });
 
-
-// var tipeando = false;
-
-// function typedInfoPersonal(){
-//     tipeando = true;
-//     $('#info_personal').html("");
-//     var typed = new Typed('.info_personal', {
-//         strings: [  
-//                         "<span class=\"parametros\">name:</span>           <span class=\"datos\">\"Gabriel\"</span>, ^200\n" + 
-//                         "<span class=\"parametros\">lastname:</span>       <span class=\"datos\">\"Vejar\"</span>,^200\n" + 
-//                         "<span class=\"parametros\">age:</span>             <span class=\"datos\">28</span>,^200\n" + 
-//                         "<span class=\"parametros\">nationality:</span>    <span class=\"datos\">\"chilean\"</span> ^5000"
-//                     ],
-//         typeSpeed: 20,
-//         startDelay: 1000,
-//         loop: true,
-//         showCursor: false
-    
-//     });
-
-// } /* fin  typedInfoPersonal()*/
-
-// $('#ventana-terminal').hide();
-
-// $(function() {
-//     typedInfoPersonal();
-//     window.addEventListener('scroll', () => {
-
-//         // const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-//         const scrolled = window.scrollY;
-
-//         // console.log("scrollable" + scrollable);
-//         console.log("scrolled" + scrolled);
-
-//         if (scrolled >= 600 && scrolled <1200){
-//             $('#ventana-terminal').show();
-//             $('#ventana-terminal').addClass('animated bounceInLeft');
-//             if (tipeando === false){
-//                 $('#info_personal').addClass('.info_personal');
-//             }
-            
-//         } else {
-//             $('#ventana-terminal').fadeOut();
-//             $('#ventana-terminal').addClass('animated bounceInLeft');
-//             $('#info_personal').removeClass('.info_personal');
-//             tipeando = false;
-//         }
-    
-//     });
-
-// });
