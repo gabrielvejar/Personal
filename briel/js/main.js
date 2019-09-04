@@ -35,8 +35,16 @@ $(function() {
     
     
     /* Animaciones entrada */
-    $('#iconos').addClass('animated fadeInLeft delay-1s');
-    $('#texto-principal').addClass('animated fadeInDown');
+
+    if(window.innerWidth<=640){
+        $('#iconos').addClass('animated slideInDown delay-1s');
+        $('#texto-principal').addClass('animated fadeInUp');
+    } else {
+        $('#iconos').addClass('animated slideInLeft delay-1s');
+        $('#texto-principal').addClass('animated fadeInDown');
+    }
+
+    
     $('#ventana-terminal').addClass('animated bounceInRight');
     $('#ventana-terminal2').addClass('animated bounceInRight');
     $('#ventana-contacto').addClass('animated bounceInRight');
@@ -86,8 +94,8 @@ $(function() {
         const scrolled = window.scrollY;
 
         // console.log("scrollable" + scrollable);
-        console.log(alturavh);
-        console.log("scrolled" + scrolled);
+        // console.log(alturavh);
+        // console.log("scrolled" + scrolled);
 
         //main - inicio
         if (scrolled < window.innerHeight) {

@@ -52,6 +52,8 @@ section {
     color: rgb(131, 131, 131);
 } */
 
+
+
 #iconos {
     background-color: rgba(3, 34, 49, 0.747);
     border-radius: 0 2vw 2vw 0;
@@ -112,11 +114,15 @@ section {
     position: fixed;
     display: flex;
     flex-direction: column;
+    
 
     -webkit-box-shadow: 0px 33px 83px 15px rgba(0,0,0,0.66);
     -moz-box-shadow: 0px 33px 83px 15px rgba(0,0,0,0.66);
     box-shadow: 0px 33px 83px 15px rgba(0,0,0,0.66);
 }
+
+
+
 #ventana-terminal {
     top: 20%;
     left: 15%;
@@ -131,6 +137,12 @@ section {
     height: 90vh;
 }
 
+#ventana-contacto {
+    top: 10%;
+    left: 15%;
+    width: 60vw;
+    height: 80vh;
+}
 
 .barra {
     background: linear-gradient(0deg, rgba(18,53,60,1) 0%, rgba(54,148,167,1) 100%);
@@ -162,13 +174,7 @@ section {
     font-size: 1.2vw;
 }
 
-#ventana-contacto {
-    position: fixed;
-    top: 20%;
-    left: 15%;
 
-    width: 50vw;
-}
 
 
 
@@ -179,45 +185,69 @@ section {
         background-image: url('../img/gabrielmobile.jpg');
     }
 
-    #ventana-terminal,
-    #ventana-terminal2 {
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
+    #texto-principal {
+        margin-top: 100%;
+        margin-left: 10%;
+        font-size: 6vw;
     }
+
+
     #ventana-terminal {
-        width: 90vw;
-        height: 50vw;
+        
+        top: 25%;
+        left: 5%;
+        width: 90%;
+        height: 30%;
     }
     #ventana-terminal2 {
-        width: 40vw;
-        height: 20vw;
+        top: 20%;
+        left: 2.5%;
+        width: 95%;
+        height: 75%;
+    }
+    #consola-formacion {
+        font-size: 3vw;
+        height: 100%;
+        padding: 5%;
     }
 
     .consola,
     .barra p{
-    color: white;
-    font-size: 3vw;
+        color: white;
+        font-size: 3vw;
+    }
+    .barra {
+        height: 4vh;
     }
     .consola{
-    padding-left: 2.5vw;
-    padding-top: 2.5vw;
+        padding-left: 2.5vw;
+        padding-top: 2.5vw;
     }
 
     #iconos {
         width: 100%;
-        height: 20vw;
-        top: 10vw;
+        height: 15vh;
+        top: 0;
+        margin-top: 0;
         flex-direction: row;
         border-radius: 0 0 2vw 2vw;
     }
-    #icono-info-personal {
+    
+    .clase-iconos {
+        max-width: 25%;
+        font-size: 10vw;
+    }
+    .clase-iconos p{
+        margin: 0;
         font-size: 3vw;
     }
-    #icono-info-personal i {
-        font-size: 12vw;
+    .clase-iconos i {
+        padding-top: 1vh;
+        font-size: 15vw;
     }
+    .borde{
+        border-right: 0;
+        border-bottom: 3px solid rgb(255, 136, 0);
 }
 
+}
