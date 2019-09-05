@@ -1,29 +1,32 @@
 
+// $('#iconos').hide();
+// $('#texto-principal').hide();
 
-$('#iconos').hide();
-$('#texto-principal').hide();
-
-$('#ventana-terminal').hide();
-$('#ventana-terminal2').hide();
-$('#ventana-contacto').hide();
+//  $('#ventana-terminal').hide();
+//  $('#ventana-terminal2').hide();
+//  $('#ventana-contacto').hide();
 
 
 /* Animaciones entrada */
 
-if(window.innerWidth<=640){
-    $('#iconos').addClass('animated slideInDown delay-1s');
-    $('#texto-principal').addClass('animated fadeInUp');
-} else {
-    $('#iconos').addClass('animated slideInLeft delay-1s');
-    $('#texto-principal').addClass('animated fadeInDown');
-}
+// if(window.innerWidth<=640){
+    // $('#iconos').addClass('animated slideInDown delay-1s');
+    // $('#texto-principal').addClass('animated fadeInUp');
+// } else {
+//     $('#iconos').addClass('animated slideInLeft delay-1s');
+//     $('#texto-principal').addClass('animated fadeInDown');
+// }
 
     
-$('#ventana-terminal').addClass('animated bounceInRight');
-$('#ventana-terminal2').addClass('animated bounceInRight');
-$('#ventana-contacto').addClass('animated bounceInRight');
+// $('#ventana-terminal').addClass('animated bounceInRight');
+// $('#ventana-terminal2').addClass('animated bounceInRight');
+// $('#ventana-contacto').addClass('animated bounceInRight');
 
-$(function() {
+
+
+
+
+
 
     function ventana(id) {
         if (id !== 'texto-principal'){
@@ -43,7 +46,7 @@ $(function() {
             $('#'+id).show(); 
         }
     }
-
+// 
     
     $('#iconos').show();
     $('#texto-principal').show(); 
@@ -88,6 +91,8 @@ $(function() {
 
 
 
+$(function(){
+
 
 
     window.addEventListener('scroll', () => {
@@ -102,9 +107,7 @@ $(function() {
 
         //main - inicio
         if (scrolled < window.innerHeight) {
-            ventana('texto-principal');
-
-
+            // ventana('texto-principal');
             $('.clase-iconos').removeClass('borde');
             $('#icono-inicio').addClass('borde');
         }
@@ -115,7 +118,9 @@ $(function() {
            
                 typed1.start();
 
-                ventana('ventana-terminal');
+                
+
+                // ventana('ventana-terminal');
             
 
                 $('.clase-iconos').removeClass('borde');
@@ -132,9 +137,9 @@ $(function() {
 
             // $('#ventana-terminal').fadeOut();
             // $('#texto-principal').fadeOut();
-            // $('#ventana-terminal2').show();
+            
 
-            ventana('ventana-terminal2');
+            // ventana('ventana-terminal2');
             
 
             $('.clase-iconos').removeClass('borde');
@@ -146,8 +151,9 @@ $(function() {
         if (scrolled >= window.innerHeight*3 && scrolled < window.innerHeight*4) {
 
 
-            ventana('ventana-contacto');
+            // ventana('ventana-contacto');
             
+            // $('#ventana-contacto').show();
 
             $('.clase-iconos').removeClass('borde');
             $('#icono-contacto').addClass('borde');

@@ -9,36 +9,46 @@
     padding-left: 30%;
 }
 
-@media screen and (min-width : 641px) {
-    body{
-        background-image: url("../img/gabriel.jpg");
-    }
-}
+
+
+/* html {
+    scroll-behavior: smooth;
+  } */
+
 html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+    background-image: url("../img/gabriel.jpg");
     background-attachment: fixed;
     background-position: right;
     background-size: cover;
+    overflow-x: hidden;
     
 } 
-main,
-section {
+
+#mobile-bg img{
+    display: none;
+}
+section,
+main{
+    position: relative;
     width: 100%;
     height: 100vh;
     margin: 0;
     padding: 0;
 }
 
+
+
 #texto-principal {
     /* background-color: rgba(165, 42, 42, 0.61); */
-    position: fixed;
-    top: 0;
-    left:0;
-    margin-top: 20%;
-    margin-left: 20%;
-    color: rgb(56, 56, 56);
+    position: relative;
+    top: 50%;
+    /* left: 20%; */
+    /* margin-top: 20%;*/
+    margin-left: 20%; 
+    color: rgb(180, 180, 180);
     font-family:  "Raleway", sans-serif;
     /* font-family: 'Roboto', sans-serif; */
     /* font-family: Lato, Helvetica; */
@@ -59,9 +69,12 @@ section {
 
 
 #iconos {
-    background-color: rgba(3, 34, 49, 0.747);
+    /* background-color: rgba(3, 34, 49, 0.747); */
+    background-color: #071e2a;
+
     border-radius: 0 2vw 2vw 0;
     position: fixed;
+    z-index: 100;
     width: 7vw;
     height: 40vw;
     top: 50%;
@@ -112,41 +125,49 @@ section {
 }
 
 
-/*medidas en vh*/
+
 .ventana-terminal {
     border-radius: 10px 10px 0 0;
-    position: fixed;
+    position: relative;
     display: flex;
     flex-direction: column;
+    /* margin-top: 50vh;
+    margin-bottom: 50vh; */
     
 
-    -webkit-box-shadow: 0px 33px 83px 15px rgba(0,0,0,0.66);
-    -moz-box-shadow: 0px 33px 83px 15px rgba(0,0,0,0.66);
-    box-shadow: 0px 33px 83px 15px rgba(0,0,0,0.66);
+    -webkit-box-shadow: 0px 33px 83px 15px rgba(65, 65, 65, 0.66);
+    -moz-box-shadow: 0px 33px 83px 15px rgba(143, 143, 143, 0.66);
+    box-shadow: 0px 33px 83px 15px rgb(48, 48, 48);
 }
 
 
 
 #ventana-terminal {
     top: 20%;
-    left: 15%;
+    left: 0%;
+    margin: auto;
     width: 40vw;
-    height: 25vw;
+
+    
+    /* height: 25vw; */
 }
 
 #ventana-terminal2 {
-    top: 5%;
-    left: 15%;
+    top: 5%;    
+    margin: auto;
     width: 80vw;
-    height: 90vh;
+    /* height: 90vh; */
 }
 
 #ventana-contacto {
-    top: 10%;
-    left: 15%;
+    top: 20%;
+    margin: auto;
     width: 60vw;
-    height: 80vh;
+    padding: 0;
+    /* transform: scale(0.8); */
+    /* height: 80vh; */
 }
+
 
 .barra {
     background: linear-gradient(0deg, rgba(18,53,60,1) 0%, rgba(54,148,167,1) 100%);
@@ -165,9 +186,9 @@ section {
 
 .consola{
     background-color: rgba(0, 0, 0, 0.774);
-    height: 100vw;
-    padding-left: 1.3vw;
-    padding-top: .5vw;
+    /* height: 100vw; */
+    padding: 1.3vw;
+    /* padding-top: .5vw; */
     color: white;
     font-size: 1.4vw;
     font-family: 'Roboto Mono', monospace;
@@ -178,65 +199,65 @@ section {
     font-size: 1.2vw;
 }
 
+#consola-contacto {
+    padding: 0;
+}
+
+/* and (orientation: portrait) */
 
 
 
-
-
-@media screen and (max-width : 640px) and (orientation: portrait) {
+@media screen and (max-width : 640px){
 
     html, body  {
-        background-image: url('../img/gabrielmobile.jpg');
+        background-image: none;
+        /* background-image: url('../img/gabrielmobile.jpg'); */
     }
-    /* body:before {
-        content: "";
+
+    #mobile-bg img{
         display: block;
+        height: 100vh;
+        width: 100vw;
         position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -10;
-        background: url("../img/gabrielmobile.jpg") no-repeat center center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-      } */
+        z-index: -100;
+    }
+
 
     #texto-principal {
-        top: 50%;
+        top: 40%;
         margin-top: 0;
-        margin-left: 10%;
+        margin-left: 7%;
+        /* margin-left: 10%; */
         font-size: 6vw;
     }
+    
 
 
     #ventana-terminal {
         
-        top: 25%;
-        left: 5%;
+        top: 30%;
         width: 90%;
-        height: 30%;
+        /* height: 30%; */
+    }
+    #consola-info{
+
     }
     #ventana-terminal2 {
         top: 20%;
-        left: 2.5%;
         width: 95%;
-        height: 75%;
+        /* height: 75%; */
     }
     #consola-formacion {
         font-size: 3vw;
-        height: 100%;
+        /* height: 100%; */
         padding: 5%;
     }
     #ventana-contacto {
-        top: auto;
-        bottom: 2%;
-        left: 10%;
+        top: 30vw;
         width: 80vw;
-        height: 80vh;
+        /* height: 80vh; */
     }
+    
 
     .consola,
     .barra p{
@@ -249,12 +270,11 @@ section {
     .consola{
         padding-left: 2.5vw;
         padding-top: 2.5vw;
-        height: 75vh;
     }
 
     #iconos {
         width: 100%;
-        height: 12vh;
+        height: 25vw;
         top: 0;
         margin-top: 0;
         flex-direction: row;
@@ -262,7 +282,7 @@ section {
     }
     
     .clase-iconos {
-        max-width: 25%;
+        max-width: 25vw;
         font-size: 10vw;
     }
     .clase-iconos p{
@@ -276,6 +296,6 @@ section {
     .borde{
         border-right: 0;
         border-bottom: 3px solid rgb(255, 136, 0);
-}
+    }
 
-}
+} 
