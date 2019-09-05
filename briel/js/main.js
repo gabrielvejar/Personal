@@ -7,6 +7,22 @@ $('#ventana-terminal').hide();
 $('#ventana-terminal2').hide();
 $('#ventana-contacto').hide();
 
+
+/* Animaciones entrada */
+
+if(window.innerWidth<=640){
+    $('#iconos').addClass('animated slideInDown delay-1s');
+    $('#texto-principal').addClass('animated fadeInUp');
+} else {
+    $('#iconos').addClass('animated slideInLeft delay-1s');
+    $('#texto-principal').addClass('animated fadeInDown');
+}
+
+    
+$('#ventana-terminal').addClass('animated bounceInRight');
+$('#ventana-terminal2').addClass('animated bounceInRight');
+$('#ventana-contacto').addClass('animated bounceInRight');
+
 $(function() {
 
     function ventana(id) {
@@ -34,20 +50,7 @@ $(function() {
     $('#icono-inicio').addClass('borde');
     
     
-    /* Animaciones entrada */
 
-    if(window.innerWidth<=640){
-        $('#iconos').addClass('animated slideInDown delay-1s');
-        $('#texto-principal').addClass('animated fadeInUp');
-    } else {
-        $('#iconos').addClass('animated slideInLeft delay-1s');
-        $('#texto-principal').addClass('animated fadeInDown');
-    }
-
-    
-    $('#ventana-terminal').addClass('animated bounceInRight');
-    $('#ventana-terminal2').addClass('animated bounceInRight');
-    $('#ventana-contacto').addClass('animated bounceInRight');
 
 
 
@@ -106,7 +109,7 @@ $(function() {
             $('#icono-inicio').addClass('borde');
         }
 
-        //seccon info personal
+        //seccion info personal
         if (scrolled >= window.innerHeight && scrolled < window.innerHeight*2){
 
            
