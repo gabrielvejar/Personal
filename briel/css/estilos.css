@@ -180,14 +180,7 @@ section {
 
 
 
-
-
-
-@media screen and (max-width : 640px) and (orientation: portrait) {
-
-    /* html, body  {
-        background-image: url('../img/gabrielmobile.jpg');
-    } */
+@media screen and (max-width : 640px) {
     body:before {
         content: "";
         display: block;
@@ -203,6 +196,14 @@ section {
         -o-background-size: cover;
         background-size: cover;
       }
+}
+
+
+@media screen and (max-width : 640px) and (orientation: portrait) {
+
+    /* html, body  {
+        background-image: url('../img/gabrielmobile.jpg');
+    } */
 
     #texto-principal {
         top: 50%;
