@@ -58,8 +58,10 @@ main{
 }
 
 #texto-principal h1 {
-    font-family: 'Cantarell', sans-serif;
-    color: rgb(131, 131, 131);
+    font-family: 'Syncopate', sans-serif;
+    /* font-family: 'Cantarell', sans-serif; */
+    color: rgb(218, 218, 218);
+    /* color: rgb(131, 131, 131); */
 }
 
 /* #titulos-gabriel {
@@ -100,10 +102,8 @@ main{
     /* border-top: 3px solid rgb(255, 136, 0); */
     /* border-bottom: 3px solid rgb(255, 136, 0); */
 }
-.clase-iconos:hover {
-    transition-duration: 0.3s;
-    transform: scale(1.2);
-}
+
+
 .clase-iconos p {
     font-size: 0.7vw;
 }
@@ -204,8 +204,12 @@ main{
 }
 
 /* and (orientation: portrait) */
-
-
+@media screen and (min-width : 641px){
+    .clase-iconos:hover {
+        transition-duration: 0.3s;
+        transform: scale(1.2);
+    }
+}
 
 @media screen and (max-width : 640px){
 
