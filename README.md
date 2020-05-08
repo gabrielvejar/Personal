@@ -1,3 +1,2 @@
-# Portafolio Javascript
+# Página web personal
 
-Aquí se cargan los proyectos realizados en javascript.
