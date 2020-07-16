@@ -1,5 +1,5 @@
 # Página web personal
 
-**Página web personal:** [vejarperez.ga](http://vejarperez.ga/)
+**Página web personal:** [vejar.ga](http://vejar.ga/)
 
-**Portafolio de proyectos:** [vejarperez.ga/briel/proyectos](https://vejarperez.ga/briel/proyectos)
+**Portafolio de proyectos:** [proyectos.vejar.ga](http://proyectos.vejar.ga)
